@@ -5,57 +5,58 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { DtButtonColor, DtButtonVariant } from "./components/dt-button/dt-button";
 export namespace Components {
-    interface MyComponent {
+    interface DtButton {
         /**
-          * The first name
+          * The button color
          */
-        "first": string;
+        "color": DtButtonColor;
         /**
-          * The last name
+          * Disabled state for the button
          */
-        "last": string;
+        "disabled": boolean;
         /**
-          * The middle name
+          * The button variant
          */
-        "middle": string;
+        "variant": DtButtonVariant;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLDtButtonElement extends Components.DtButton, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLDtButtonElement: {
+        prototype: HTMLDtButtonElement;
+        new (): HTMLDtButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "dt-button": HTMLDtButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface DtButton {
         /**
-          * The first name
+          * The button color
          */
-        "first"?: string;
+        "color"?: DtButtonColor;
         /**
-          * The last name
+          * Disabled state for the button
          */
-        "last"?: string;
+        "disabled"?: boolean;
         /**
-          * The middle name
+          * The button variant
          */
-        "middle"?: string;
+        "variant"?: DtButtonVariant;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "dt-button": DtButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "dt-button": LocalJSX.DtButton & JSXBase.HTMLAttributes<HTMLDtButtonElement>;
         }
     }
 }

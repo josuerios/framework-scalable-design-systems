@@ -9,3 +9,28 @@ Source code for BarcelonaJS Design systems for multiple frameworks, one tool to 
     $ npm init stencil
     ```
     * When prompted, select `component` as starter.
+
+## Step 1: Creating the first DS component: A button
+1. Remove the generated component example code.
+    *  	Remove `my-component` folder in `src/components`
+    *  	Remove `utils` folder in `src/`   
+
+2. Generate the button component boilerplate by running: 
+    ```bash
+    $ npm run generate
+    ```
+   * Remember to include a dash ``-`` in the component name.
+   
+3. Add the button implementation (see commit).
+
+4. Use the `index.html` located in `src` to instantiate the component and test it.
+
+5. Check the results by running a dev environment in dev mode with:
+    ```bash
+       $ npm start
+    ```
+
+6. Make sure all auto-generated files are up to date with the latest changes: 
+    ```bash
+       $ npm run build
+    ```

@@ -1,0 +1,72 @@
+.dt-button-principal.dt-button-primary:disabled,
+.dt-button-principal.dt-button-primary:disabled:hover,
+.dt-button-principal.dt-button-secondary:disabled,
+.dt-button-principal.dt-button-secondary:disabled:hover {
+  background-color: #dddede;
+  border-color: #dddede;
+  box-shadow: none;
+  color: #9fa2a2;
+}
+.dt-button-outline.dt-button-primary:disabled,
+.dt-button-outline.dt-button-primary:disabled:hover,
+.dt-button-outline.dt-button-secondary:disabled,
+.dt-button-outline.dt-button-secondary:disabled:hover {
+  border-color: #9fa2a2;
+  box-shadow: unset;
+  color: #9fa2a2;
+}
+.dt-button {
+  border: 1px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  height: 2.5rem;
+  min-width: 120px;
+  outline: none;
+  padding: 0 1rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  white-space: nowrap;
+}
+.dt-button-principal.dt-button-primary {
+  background-color: #ea6422;
+  border-color: #ea6422;
+  color: #fff;
+}
+.dt-button-principal.dt-button-primary:hover {
+  background-color: #fb8b29;
+  border-color: #fb8b29;
+  box-shadow: 0 4px 12px 0 rgba(14, 15, 32, 0.15);
+}
+.dt-button-outline.dt-button-primary {
+  background-color: transparent;
+  color: #ea6422;
+}
+.dt-button-outline.dt-button-primary:hover {
+  border-color: #fb8b29;
+  box-shadow: 0 4px 12px 0 rgba(14, 15, 32, 0.15);
+  color: #fb8b29;
+}
+.dt-button-principal.dt-button-secondary {
+  background-color: #179ea4;
+  border-color: #179ea4;
+  color: #fff;
+}
+.dt-button-principal.dt-button-secondary:hover {
+  background-color: #56c6c8;
+  border-color: #56c6c8;
+  box-shadow: 0 4px 12px 0 rgba(14, 15, 32, 0.15);
+}
+.dt-button-outline.dt-button-secondary {
+  background-color: transparent;
+  color: #179ea4;
+}
+.dt-button-outline.dt-button-secondary:hover {
+  border-color: #56c6c8;
+  box-shadow: 0 4px 12px 0 rgba(14, 15, 32, 0.15);
+  color: #56c6c8;
+}
+
