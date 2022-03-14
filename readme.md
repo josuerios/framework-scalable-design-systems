@@ -34,3 +34,21 @@ Source code for BarcelonaJS Design systems for multiple frameworks, one tool to 
     ```bash
        $ npm run build
     ```
+
+## Step 2: React integration
+1. With the `lerna` monorepo structure in place, clone the following repository in the ``packages/`` folder:
+    ```bash
+       $ git clone https://github.com/ionic-team/stencil-ds-react-template my-ds-react
+    ```
+   * Remove the ``.git`` inside of `packages/my-ds-react` to avoid having this folder as a git submodule inside the main repository.
+   * __Hint:__ The `lerna` monorepo structure was achieved by moving some files around and running `lerna init` on the root folder repository.
+   For more details, check the first commit of this branch. 
+2. Update the package name and link the main Stencil web component dependency in the React wrapper.
+    * __Hint:__ ``lerna add my-ds --scope=my-ds-react`` will link the packages and install missing dependencies.
+    * Remove the ``private`` field in the package.json to make it publishable.
+3. Install `@stencil/react-output-target` in the stencil package.
+4. Go to ``stencil.config.ts`` and include the React output-target.
+    * Update the `corePackageName` field
+	* Update the `proxyFile` field
+5. Run build in the Stencil project and check that the files are correctly generated in the React package.
+ 
