@@ -51,4 +51,26 @@ Source code for BarcelonaJS Design systems for multiple frameworks, one tool to 
     * Update the `corePackageName` field
 	* Update the `proxyFile` field
 5. Run build in the Stencil project and check that the files are correctly generated in the React package.
- 
+
+## Step 3: Angular integration
+1. Generate a new Angular workspace in the ``packages/`` folder:
+    ```bash
+       $ ng new my-ds-angular-workspace --create-application=false
+    ```
+2. Generate a library in the Angular workspace:
+    ```bash
+       $ ng generate library my-ds-angular
+    ```
+3. Optionally, remove the generated service and component files, update the Angular module and the ``public-api.ts`` file accordingly.
+4. Link the main Stencil web component dependency in the Angular workspace
+    ``lerna add my-ds --scope=my-ds-angular-workspace``
+5. Install ``@stencil/angular-output-target`` in the stencil package.
+6.  Go to ``stencil.config.ts`` and include the Angular output-target.
+        * Update the `corePackageName` field
+        * Update the `proxyFile` field
+7. Run build in the Stencil project and check that the files are correctly generated in the Angular lib package.
+8. Export and declare directives in Angular main library module.
+9. Export the components symbols in the ``public-api.ts`` barrel export.
+10. Add the main Stencil web component dependency in the Angular library `package.json`.
+    * Add it also to ``allowedNonPeerDependencies`` array in `ng-package.json`.
+11. Both component libraries should be ready to be published and used. 😉
